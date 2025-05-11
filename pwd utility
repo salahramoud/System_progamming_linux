@@ -1,0 +1,25 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 4096
+
+int pwd_main() {
+
+    char buf[SIZE];
+
+    if (getcwd(buf,SIZE) == NULL)
+    {
+
+        printf(" Error size of buf is not enough \n");
+        exit(-2);
+
+    }
+
+
+    printf ("%s\n" , buf);
+
+    return 0;
+
+
+}
